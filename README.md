@@ -23,14 +23,14 @@ provider "aws" {
   version = "~> 1.40"
 ...
 }
-resource "aws_route53_zone" "ctkruse" {
-  name = "ctkruse.com"
+resource "aws_route53_zone" "ckruse" {
+  name = "c-kruse.com"
 }
 
-module "ctkruse" {
+module "ckruse" {
   source         = "github.com/c-kruse/aws_s3_static_web"
   // Required Arguments
-  hosted_zone_id = "${aws_route53_zone.ctkruse.zone_id}"
+  hosted_zone_id = "${aws_route53_zone.ckruse.zone_id}"
   // Optional Arguments
   subdomain  = "*"
   index_document = "myindex.html"
