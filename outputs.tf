@@ -1,7 +1,5 @@
-output "distribution_ids" {
-  value = [
-    "${aws_cloudfront_distribution.dist.id}",
-  ]
+output "distribution_id" {
+  value = "${aws_cloudfront_distribution.dist.id}"
 }
 
 output "certificate" {
